@@ -11,8 +11,8 @@ export default function Home() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-blue-100">
             Three hard-working kids ready to make your stuff shine. We clean
-            cars, windows, trash bins, and much more. Just give us a call and
-            we&apos;ll get it done!
+            cars, windows, and trash bins, take care of lawns, and much more.
+            Just give us a call and we&apos;ll get it done!
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -52,13 +52,18 @@ export default function Home() {
       {/* Services Overview */}
       <section className="bg-gray-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900">What We Clean</h2>
-          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <h2 className="text-3xl font-bold text-gray-900">What We Do</h2>
+          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {[
               {
                 title: "Cars",
                 description:
-                  "Interior and exterior cleaning to get your car looking fresh.",
+                  "Exterior washing to get your car looking fresh.",
+              },
+              {
+                title: "Lawn Care",
+                description:
+                  "Mowing, weed whacking, and weeding to keep your yard tidy.",
               },
               {
                 title: "Windows",
@@ -73,7 +78,7 @@ export default function Home() {
               {
                 title: "And More!",
                 description:
-                  "Have something else that needs cleaning? Give us a call!",
+                  "Have something else that needs doing? Give us a call!",
               },
             ].map((service) => (
               <div

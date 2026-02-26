@@ -8,8 +8,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white">The Little Guys</h3>
             <p className="mt-2 text-sm">
-              Three hard-working kids who clean cars, windows, trash bins, and
-              more.
+              Three hard-working kids who clean cars, windows, and trash bins,
+              take care of lawns, and more.
             </p>
           </div>
           <div>

@@ -40,8 +40,8 @@ export default function ContactPage() {
                   1
                 </span>
                 <p>
-                  Call us and let us know what you need cleaned (cars, windows,
-                  trash bins, or anything else).
+                  Call us and let us know what you need (car cleaning, lawn
+                  care, window washing, trash bins, or anything else).
                 </p>
               </div>
               <div className="flex gap-3">

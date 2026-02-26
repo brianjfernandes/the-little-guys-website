@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+
 export const metadata: Metadata = {
   title: "About | The Little Guys",
   description:
     "Meet the three 12-year-olds behind The Little Guys cleaning service.",
 };
 
-const team = ["Declan", "Amari", "James"];
+const team = [
+  { name: "Declan", photo: "/team/declan.jpg", position: "object-top" },
+  { name: "Amare", photo: "/team/amare.jpg", position: "object-center" },
+  { name: "James", photo: "/team/james.jpg", position: "object-center" },
+];
 
 export default function AboutPage() {
   return (
@@ -44,26 +50,38 @@ export default function AboutPage() {
           you&apos;re working with.
         </p>
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          {team.map((name) => (
-            <div key={name} className="text-center">
-              <div className="mx-auto flex h-64 w-64 flex-col items-center justify-center overflow-hidden rounded-lg bg-gray-100">
-                <svg
-                  className="h-20 w-20 text-gray-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          {team.map((member) => (
+            <div key={member.name} className="text-center">
+              <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-lg bg-gray-100">
+                {member.photo ? (
+                  <Image
+                    src={member.photo}
+                    alt={member.name}
+                    fill
+                    className={`object-cover ${member.position}`}
+                    sizes="256px"
                   />
-                </svg>
-                <p className="mt-2 text-sm text-gray-400">Photo coming soon</p>
+                ) : (
+                  <div className="flex h-full flex-col items-center justify-center">
+                    <svg
+                      className="h-20 w-20 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1}
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      />
+                    </svg>
+                    <p className="mt-2 text-sm text-gray-400">Photo coming soon</p>
+                  </div>
+                )}
               </div>
               <p className="mt-4 text-lg font-semibold text-gray-900">
-                {name}
+                {member.name}
               </p>
             </div>
           ))}

@@ -3,19 +3,24 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | The Little Guys",
   description:
-    "Car cleaning, window washing, trash bin cleaning and more from The Little Guys.",
+    "Car cleaning, lawn care, window washing, trash bin cleaning and more from The Little Guys.",
 };
 
 const services = [
   {
     title: "Car Cleaning",
     description:
-      "We'll wash the outside and clean up the inside of your car. Wipe down the seats, vacuum the floors, and make it look like new. Whether it's a quick wash or a deeper clean, we've got you covered.",
+      "We'll wash the outside of your car and make it look like new. Whether it's a quick wash or a deeper clean, we've got you covered.",
   },
   {
     title: "Window Cleaning",
     description:
       "We clean windows inside and out to get them sparkling and streak-free. Perfect for homes and small businesses that want to let the sunshine in.",
+  },
+  {
+    title: "Lawn Care",
+    description:
+      "We'll keep your yard looking great! We offer mowing, weed whacking, and weeding to make sure your lawn stays neat and tidy. Perfect for regular upkeep or a one-time cleanup.",
   },
   {
     title: "Trash Bin Cleaning",
@@ -34,8 +39,8 @@ export default function ServicesPage() {
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <h1 className="text-4xl font-bold text-gray-900">Our Services</h1>
       <p className="mt-4 max-w-2xl text-lg text-gray-600">
-        We clean cars, windows, trash bins, and more. Here&apos;s what we can do
-        for you.
+        We clean cars, windows, and trash bins, take care of lawns, and more.
+        Here&apos;s what we can do for you.
       </p>
 
       <div className="mt-12 space-y-8">
